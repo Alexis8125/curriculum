@@ -9,6 +9,9 @@
             padding: 0;
             margin: 0;
         }
+        body{
+            background-color: #346464;
+        }
         .container{
             background-color: rgb(166, 186, 180);
             width: 100%;
@@ -34,9 +37,52 @@
         #tree{
             background-color: #ff0000;
         }
+
+        /* media queries mayor a 1200px*/
+        @media screen and (max-width:1200px){
+            body{
+                background-color: antiquewhite;
+            }
+            h1{
+                color: orange;
+                background-color: bisque;
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 1000px){
+            body{
+                background-color: aquamarine;
+            }
+        }
+
+        @media screen and (max-width: 800px){
+            body{
+                background-color: rgb(163, 5, 108);
+            }
+        }
+
+        @media screen and (max-width: 600px){
+            body{
+                background-color: rgb(232, 214, 20);
+            }
+            #one{
+                background-color: #0f94a5;
+                order: 2;
+            }
+            #two{
+                background-color: #e5c808;
+                order: 1;
+            }
+            #tree{
+                background-color: #14f362;
+                order: 3;
+            }
+        }
     </style>
 </head>
 <body>
+    <h1>Alexis Arenas</h1>
     <div class="container">
         <div class="element" id="one">#1</div>
         <div class="element" id="two">#2</div>
