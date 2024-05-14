@@ -59,29 +59,38 @@ function send_info(){
     let last_name = document.getElementById("last_name").value;
     let password = document.getElementById("password").value;
     let confirm_password = document.getElementById("confirm_password").value;
-    if(name.length == 0 || last_name.length == 0){
+    if(name.length == 0 || last_name.length == 0 || password.length == 0 || confirm_password.length == 0){
         Swal.fire({
                 title: "Campos Vacios",
                 text: "Alguno de los campos se encuentra vacio",
                 icon: "error"
               });
               if(name.length == 0){
-                document.getElementById("name").style.border = "2px solid red"
+                document.getElementById("name").style.border = "2px solid red";
               }
               if(last_name.length == 0){
-                document.getElementById("last_name").style.background = "red"
+                document.getElementById("last_name").style.border = "2px solid red";
+              }
+              if(password.length == 0){
+                document.getElementById("password").style.border = "2px solid red";
+              }
+              if(confirm_password.length == 0){
+                document.getElementById("confirm_password").style.border = "2px solid red";
               }
 
     }else{
-        document.getElementById("name").style.border = "2px solid green"
-        document.getElementById("last_name").style.background = "green"
-        document.getElementById("print").innerHTML = "<strong>" + name + " " + last_name + "</strong>"
+        document.getElementById("name").style.border = "2px solid green";
+        document.getElementById("last_name").style.border = "2px solid green";
+        document.getElementById("print").innerHTML = "<strong>" + name + " " + last_name + "</strong>";
     }
 
     if(password === confirm_password){
         Swal.fire("La contraseña es correcta");
+        document.getElementById("password").style.border = "2px solid green";
+        document.getElementById("confirm_password").style.border = "2px solid green";
     }else{
         Swal.fire("Verifique su contraseña");
+        document.getElementById("confirm_password").style.border = "2px solid red";
     }
     
 }
