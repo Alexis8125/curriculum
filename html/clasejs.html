@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 <body onload="load_page()">
 
@@ -28,6 +35,19 @@
             <button onclick="send_info()">ENVIAR</button>
         </div>
         <div id="print"></div>
+        <br><br>
+        <div id="print_age"></div>
+        <div id="print_age_eti"></div>
+        <div id="text_reverse"></div>
+        <br><br>
+        <label for="">Ingresa un numero para agregar</label>
+        <input type="number" name="" id="#input_number">
+        <input type="text" id="valores" disabled>
+        <button onclick="agregar()">AGREGAR</button>
+        <button onclick="eliminar()">ELIMINAR</button>
+        <button onclick="limpiar()">LIMPIAR</button>
+        <button onclick="impr_reverse()">REVERSE</button>
+
     </div>
 
     <!-- Archivos JS -->

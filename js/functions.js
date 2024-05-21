@@ -52,6 +52,7 @@ function load_page(){
         imageAlt: "A tall image",
         showConfirmButton: false
       });
+      document.getElementById("valores").value = array_ejem;
 }
 
 function send_info(){
@@ -95,4 +96,78 @@ function send_info(){
     
 }
 
+//ARRAYS
+var dias_sem = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"];
+var array_num = [1,2,3,4,5,6,7,8,9];
+var array_mix = [1,2.5,"abc"];
+var array_mul = [
+  {name:"Alexis", age:18, color:"Blue"},
+  {name:"Majo", age:19, color:"green"},
+  {name:"Liceth", age:10, color:"gray"},
+  {name:"Rodo", age:13, color:"white"}
+]
 
+var json_ejm = {
+  name:"Alexis",
+  lastname:"Arenas",
+  phone:"3209021560",
+  email:"laarenass@ufpso.edu.co"
+}
+
+console.log(dias_sem);
+console.log(array_num);
+console.log(array_mix);
+console.log(array_mul);
+console.log(json_ejm);
+
+for(let i=0; i<dias_sem.length;i++){
+  console.log(dias_sem[i]);
+}
+let j=0;
+while(j<array_num.length){
+  console.log(array_num[j]);
+  j++;
+}
+
+accu = 0;
+for(let k=0;k<array_num.length;k++){
+  accu+=array_num[k];
+}
+console.log(accu);
+
+var acum=0;
+for(let h=0;h<array_mul.length;h++){
+  acum+=array_mul[h].age;
+}
+console.log(acum);
+document.getElementById("print_age").innerText= "<strong>El valor de la suma es:</strong> " + acum;
+document.getElementById("print_age_eti").innerHTML= "<strong>El valor de la suma es:</strong> " + acum;
+
+function limpiar(){
+  document.getElementById("valores").value = "";
+  document.getElementById("print_age").innerText= "";
+document.getElementById("print_age_eti").innerHTML= "";
+}
+var array_ejem=[1,2,3,4,5,6,7,8,9]
+function agregar(){
+  array_ejem.push(10);
+  document.getElementById("valores").value = array_ejem;
+}
+
+function eliminar(){
+  array_ejem.pop();
+  document.getElementById("valores").value = array_ejem;
+}
+
+function impr_reverse(){
+  document.getElementById("text_reverse").innerText = array_ejem.reverse();
+  document.getElementById("valores").disabled = false;
+}
+
+//EXERCISE
+//Agregar un input que yo escriba un numero y que ese sea el numero que agregue; crear boton que agregue y elimine en el primero; y que limpiar limpie los dos input
+
+var add_num= document.getElementById("")
+
+
+//Clase 21/05/2024
