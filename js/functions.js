@@ -59,7 +59,7 @@ function load_page(){
 }
 
 function send_info(){
-    let name = document.getElementById("name").value;
+    let name = document.getElementById("name").value.trim();
     let last_name = document.getElementById("last_name").value;
     let password = document.getElementById("password").value;
     let confirm_password = document.getElementById("confirm_password").value;
