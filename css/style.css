@@ -168,6 +168,7 @@ nav{
     border-radius: 10px;
     padding: 45px 30px 60px 30px;
     transition: all ease-in-out .5s;
+    color: #000;
 }
 
 .articulo:hover{
