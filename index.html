@@ -11,6 +11,184 @@
     <link rel="icon" href="img/logo_alexis.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
     <title>Alexis Arenas - Curriculum</title>
+    <style>
+        /* Estilos para el carrusel - MEJORADO */
+        .carrusel-experiencia {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .carrusel-contenedor {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .carrusel-desliza {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .carrusel-elemento {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 30px;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        /* CONTENEDOR DE IMAGEN MEJORADO - 400x400px */
+        .contenedor-imagen {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 8px;
+            position: relative;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin: 0 auto;
+        }
+        
+        .carrusel-imagen {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .carrusel-elemento:hover .carrusel-imagen {
+            transform: scale(1.05);
+        }
+        
+        .carrusel-texto {
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        .carrusel-texto h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .carrusel-texto p {
+            color: #7f8c8d;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+        
+        .carrusel-botones {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        /* Flechas mejoradas */
+        .carrusel-prev, .carrusel-next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: 45px;
+            height: 45px;
+            margin-top: -22px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 22px;
+            transition: 0.3s ease;
+            border-radius: 50%;
+            background-color: white;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            border: 1px solid #eaeaea;
+            z-index: 10;
+        }
+        
+        .carrusel-prev {
+            left: 15px;
+        }
+        
+        .carrusel-next {
+            right: 15px;
+        }
+        
+        .carrusel-prev:hover, .carrusel-next:hover {
+            background-color: #2c3e50;
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .carrusel-puntos {
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .punto {
+            cursor: pointer;
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease, transform 0.3s ease;
+        }
+        
+        .activo, .punto:hover {
+            background-color: #2c3e50;
+            transform: scale(1.2);
+        }
+        
+        @media screen and (max-width: 900px) {
+            .contenedor-imagen {
+                width: 350px;
+                height: 350px;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .contenedor-imagen {
+                width: 300px;
+                height: 300px;
+            }
+            
+            .carrusel-prev, .carrusel-next {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+            
+            .carrusel-texto h3 {
+                font-size: 1.3rem;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .contenedor-imagen {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .carrusel-texto {
+                padding: 15px 0;
+            }
+            
+            .carrusel-texto h3 {
+                font-size: 1.2rem;
+            }
+            
+            .carrusel-texto p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- MENÚ Y VISTA PRINCIPAL -->
@@ -45,7 +223,7 @@
                     <p>Soy un estudiante de Ingeniería de Sistemas con formación técnica en asistencia administrativa. Mi pasión por la tecnología se combina con habilidades sólidas en gestión de proyectos y comunicación efectiva. Disfruto resolviendo problemas complejos y buscando soluciones innovadoras. Estoy comprometido con el aprendizaje continuo y ansioso por aplicar mis habilidades en un entorno profesional dinámico que fomente el crecimiento y la creatividad.</p>
                     <a href="document/Currículum Vitae CV Alexis Arenas.pdf" target="_blank">Ver perfil - HV</a>
                 </section>
-                <img src="img/logo_alexis.png" alt="Foto de Perfil">
+                <img src="img/foto-4x4.jpg" alt="Foto de Perfil">
             </section>
         </div>
     </header>
@@ -112,6 +290,71 @@
             </div>
         </div>
     </section>
+    
+    <!-- CARRUSEL DE EXPERIENCIA -->
+<section class="carrusel-experiencia">
+    <div class="contenedor">
+        <div class="title">
+            <h1>EXPERIENCIA REAL</h1>
+        </div>
+        <div class="carrusel-contenedor">
+            <div class="carrusel-desliza">
+                <!-- Elemento 1 del carrusel -->
+                <div class="carrusel-elemento">
+                    <div class="contenedor-imagen">
+                        <img src="icons/logo_softech.png" alt="Logo SoftTech Systems" class="carrusel-imagen">
+                    </div>
+                    <div class="carrusel-texto">
+                        <h3>Fundación de SoftTech Systems</h3>
+                        <p>SoftTech Systems nace como una empresa tecnológica enfocada en el desarrollo de páginas web, optimización de procesos empresariales y consultoría en TI. Se consolidó como proyecto académico y hoy avanza hacia un modelo empresarial con proyección real en el mercado.</p>
+                    </div>
+                </div>
+                <!-- Elemento 2 del carrusel -->
+                <div class="carrusel-elemento">
+                    <div class="contenedor-imagen">
+                        <img src="img/1.jpg" alt="Diseño de FlorentIA" class="carrusel-imagen">
+                    </div>
+                    <div class="carrusel-texto">
+                        <h3>FlorentIA - Desarrollo de Plataforma Educativa</h3>
+                        <p>FlorentIA es una plataforma educativa dirigida a estudiantes de sexto y séptimo grado. Su diseño integra un enfoque dinámico basado en inteligencia artificial y jardines virtuales para representar el progreso de los estudiantes en el aprendizaje del inglés.</p>
+                    </div>
+                </div>
+                <!-- Elemento 3 del carrusel -->
+                <div class="carrusel-elemento">
+                    <div class="contenedor-imagen">
+                        <img src="img/3.jpg" alt="Presentación FlorentIA" class="carrusel-imagen">
+                    </div>
+                    <div class="carrusel-texto">
+                        <h3>Presentación de Interfaz - Abril 2025</h3>
+                        <p>La primera versión de la interfaz de FlorentIA fue presentada el 8 de abril de 2025, mostrando el diseño inicial sin el modelo de IA. Esta etapa marcó el inicio de pruebas y retroalimentación con estudiantes y docentes.</p>
+                    </div>
+                </div>
+                <!-- Elemento 4 del carrusel -->
+                <div class="carrusel-elemento">
+                    <div class="contenedor-imagen">
+                        <img src="img/2.jpg" alt="Pruebas FlorentIA con colegios" class="carrusel-imagen">
+                    </div>
+                    <div class="carrusel-texto">
+                        <h3>Pruebas Piloto en Instituciones Educativas</h3>
+                        <p>Las pruebas piloto de FlorentIA se realizan con el Instituto Técnico Carlos Hernández Yaruro, permitiendo validar la funcionalidad de la plataforma en un entorno real y recoger aportes valiosos de estudiantes y profesores.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <a class="carrusel-prev" onclick="moverCarrusel(-1)">❮</a>
+            <a class="carrusel-next" onclick="moverCarrusel(1)">❯</a>
+        </div>
+        
+        <div class="carrusel-puntos">
+            <span class="punto" onclick="slideActual(1)"></span>
+            <span class="punto" onclick="slideActual(2)"></span>
+            <span class="punto" onclick="slideActual(3)"></span>
+            <span class="punto" onclick="slideActual(4)"></span>
+        </div>
+    </div>
+</section>
+
+    
     <!-- SECCIÓN HABILIDADES -->
     <section id="habilidades" class="habilidades">
         <div class="contenedor">
@@ -274,7 +517,7 @@
                         <br>
                     Con una actitud positiva y enérgica, se destaca por su habilidad para resolver problemas y su capacidad para trabajar en equipo. Su compromiso con la mejora continua y el aprendizaje constante lo impulsa a mantenerse actualizado en las últimas tendencias y tecnologías.
                         <br>
-                    Reconocido por su enfoque centrado en el cliente, se esfuerza por proporcionar soluciones efectivas y amigables en cualquier situación. Su habilidad para comunicarse de manera clara y efectiva lo hace un activo valioso en cualquier equipo.
+                    Reconocido por su enfoque centrado en el cliente, se esfuerza por proporcionar soluciones efectivas и amigables en cualquier situación. Su habilidad para comunicarse de manera clara y efectiva lo hace un activo valioso en cualquier equipo.
                         <br>
                     Con una dedicación inquebrantable para alcanzar el éxito y una sonrisa siempre presente, está emocionado de continuar su carrera profesional y contribuir al crecimiento y desarrollo de cualquier proyecto o equipo en el que participe.</p>
                 </div>
@@ -314,7 +557,7 @@
         </div>
         <div class="partFooter">
             <h4>Enlaces</h4>
-            <a href="#" target="_blank">SoftTech Systems</a>
+            <a href="https://alexis8125.github.io/SoftTech-Systems/" target="_blank">SoftTech Systems</a>
             <a href="https://alexis8125.github.io/FlorentIA/" target="_blank">FlorentIA</a>
         </div>
         <div class="partFooter">
@@ -331,6 +574,48 @@
     </footer>
     <!-- scripts de js -->
     <script src="https://kit.fontawesome.com/cc651b5ac7.js" crossorigin="anonymous"></script>
+     <script>
+        // JavaScript para el carrusel - VERSIÓN CORREGIDA
+        let slideIndex = 1;
+        
+        function mostrarSlides(n) {
+            let i;
+            const slides = document.getElementsByClassName("carrusel-elemento");
+            const puntos = document.getElementsByClassName("punto");
+            
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            
+            // Eliminamos el uso de display y solo usamos transform para el desplazamiento
+            const desliza = document.querySelector('.carrusel-desliza');
+            desliza.style.transform = `translateX(-${(slideIndex-1) * 100}%)`;
+            
+            // Actualizamos los puntos
+            for (i = 0; i < puntos.length; i++) {
+                puntos[i].className = puntos[i].className.replace(" activo", "");
+            }
+            
+            puntos[slideIndex-1].className += " activo";
+        }
+        
+        function moverCarrusel(n) {
+            mostrarSlides(slideIndex += n);
+        }
+        
+        function slideActual(n) {
+            mostrarSlides(slideIndex = n);
+        }
+        
+        // Iniciar el carrusel
+        document.addEventListener('DOMContentLoaded', function() {
+            mostrarSlides(slideIndex);
+            
+            // Auto-desplazamiento cada 5 segundos
+            setInterval(function() {
+                moverCarrusel(1);
+            }, 5000);
+        });
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
