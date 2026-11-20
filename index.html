@@ -5,627 +5,477 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="Hoja de vida, curriculum Vitae de Alexis Arenas">
     <meta name="keyword" content="CV, HV, Hoja de vida, curriculum Vitae de Alexis Arenas, desarrollador, Ingeniero de sistemas, developer">
-    <meta name="description" content="Sitio web del Curriculum de Alexis Arenas">
+    <meta name="description" content="Alexis Arenas: ingeniería de sistemas y desarrollo de software. Portafolio de aplicaciones web, sistemas de gestión e inteligencia artificial.">
     <!-- Poner aqui el enlace a Linkedin -->
     <link rel="author" href="">
-    <link rel="icon" href="img/logo_alexis.png" type="image/png">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/new-logo.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css?v=neutral-theme-18">
     <title>Alexis Arenas - Curriculum</title>
-    <style>
-        /* Estilos para el carrusel - MEJORADO */
-        .carrusel-experiencia {
-            padding: 60px 0;
-            background-color: #f8f9fa;
-        }
-        
-        .carrusel-contenedor {
-            max-width: 1000px;
-            position: relative;
-            margin: auto;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        
-        .carrusel-desliza {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-        
-        .carrusel-elemento {
-            min-width: 100%;
-            box-sizing: border-box;
-            padding: 30px;
-            background: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        /* CONTENEDOR DE IMAGEN MEJORADO - 400x400px */
-        .contenedor-imagen {
-            width: 400px;
-            height: 400px;
-            overflow: hidden;
-            border-radius: 8px;
-            position: relative;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            margin: 0 auto;
-        }
-        
-        .carrusel-imagen {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-        
-        .carrusel-elemento:hover .carrusel-imagen {
-            transform: scale(1.05);
-        }
-        
-        .carrusel-texto {
-            padding: 20px 0;
-            text-align: center;
-            width: 100%;
-            max-width: 600px;
-        }
-        
-        .carrusel-texto h3 {
-            color: #2c3e50;
-            margin-bottom: 10px;
-            font-size: 1.5rem;
-        }
-        
-        .carrusel-texto p {
-            color: #7f8c8d;
-            line-height: 1.6;
-            font-size: 1rem;
-        }
-        
-        .carrusel-botones {
-            text-align: center;
-            margin-top: 20px;
-        }
-        
-        /* Flechas mejoradas */
-        .carrusel-prev, .carrusel-next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: 45px;
-            height: 45px;
-            margin-top: -22px;
-            color: #2c3e50;
-            font-weight: bold;
-            font-size: 22px;
-            transition: 0.3s ease;
-            border-radius: 50%;
-            background-color: white;
-            user-select: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-            border: 1px solid #eaeaea;
-            z-index: 10;
-        }
-        
-        .carrusel-prev {
-            left: 15px;
-        }
-        
-        .carrusel-next {
-            right: 15px;
-        }
-        
-        .carrusel-prev:hover, .carrusel-next:hover {
-            background-color: #2c3e50;
-            color: white;
-            transform: scale(1.05);
-        }
-        
-        .carrusel-puntos {
-            text-align: center;
-            padding: 20px 0;
-        }
-        
-        .punto {
-            cursor: pointer;
-            height: 12px;
-            width: 12px;
-            margin: 0 5px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease, transform 0.3s ease;
-        }
-        
-        .activo, .punto:hover {
-            background-color: #2c3e50;
-            transform: scale(1.2);
-        }
-        
-        @media screen and (max-width: 900px) {
-            .contenedor-imagen {
-                width: 350px;
-                height: 350px;
-            }
-        }
-        
-        @media screen and (max-width: 768px) {
-            .contenedor-imagen {
-                width: 300px;
-                height: 300px;
-            }
-            
-            .carrusel-prev, .carrusel-next {
-                width: 35px;
-                height: 35px;
-                font-size: 18px;
-            }
-            
-            .carrusel-texto h3 {
-                font-size: 1.3rem;
-            }
-        }
-        
-        @media screen and (max-width: 480px) {
-            .contenedor-imagen {
-                width: 250px;
-                height: 250px;
-            }
-            
-            .carrusel-texto {
-                padding: 15px 0;
-            }
-            
-            .carrusel-texto h3 {
-                font-size: 1.2rem;
-            }
-            
-            .carrusel-texto p {
-                font-size: 0.9rem;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- MENÚ Y VISTA PRINCIPAL -->
     <header id="inicio">
-        <nav>
+        <nav aria-label="Navegación principal">
             <section class="contenedor nav">
-                <div class="enlaces-header">
+                <a class="brand" href="#inicio" aria-label="Alexis Arenas, inicio"><img src="img/new-logo.png" decoding="async" alt="Logo Alexis Arenas" width="56" height="56"><span>Alexis Arenas</span></a>
+                <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-navigation" aria-label="Abrir menú">
+                    <span class="menu-prompt" aria-hidden="true">&gt;_</span><span class="menu-toggle-label">Menú</span><span class="menu-toggle-mark" aria-hidden="true">+</span>
+                </button>
+                <div class="navigation-panel" id="site-navigation">
+                    <div class="navigation-panel-inner">
+                        <div class="terminal-frame">
+                            <div class="terminal-chrome" aria-hidden="true"><span class="terminal-dots"><i></i><i></i><i></i></span><span>alexis@portfolio:~</span><span class="terminal-shell">shell</span></div>
+                            <div class="terminal-boot" aria-hidden="true"><span class="terminal-prompt">$</span><span class="terminal-command">npm run serve</span><span class="terminal-cursor">_</span></div>
+                            <div class="terminal-progress" aria-hidden="true"><span></span></div>
+                            <div class="enlaces-header" aria-label="Secciones">
                     <a href="#inicio">Inicio</a>
+                    <a href="#portafolio">Portafolio</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#como-trabajo">Cómo trabajo</a>
                     <a href="#educacion">Educación</a>
                     <a href="#experiencia">Experiencia</a>
                     <a href="#habilidades">Habilidades</a>
                     <a href="#certificados">Certificados</a>
-                    <a href="#infopersonal">Contacto</a>
+                    <a href="#contacto">Contacto</a>
                 </div>
-                <div class="hamburguer">
-                    <i class="fa-solid fa-bars"></i>
+                            <div class="terminal-hint" aria-hidden="true">Elige una sección <span>ESC para cerrar</span></div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </nav>
         <div class="contenedor">
             <!-- section.contenido-header>section.textos-header+img -->
             <section class="contenido-header">
-                <section class="textos-header">
-                    <!-- h1{Alexis Arenas} -->
-                    <h1>Alexis Arenas</h1>
-                    <div class="titulospro">
-                        <h3><i class="fa-solid fa-circle-check"></i>     Ingeniero de Sistemas (en curso)</h3>
-                        <h3><i class="fa-solid fa-circle-check"></i>     Desarrollo de Aplicaciones web</h3>
-                        <h3><i class="fa-solid fa-circle-check"></i>     Asistente Administrativo</h3>
-                        <!-- <h3>Ingeniero de Sistemas (en curso)</h3> -->
-                    </div>
-                    <p>Soy un estudiante de Ingeniería de Sistemas con formación técnica en asistencia administrativa. Mi pasión por la tecnología se combina con habilidades sólidas en gestión de proyectos y comunicación efectiva. Disfruto resolviendo problemas complejos y buscando soluciones innovadoras. Estoy comprometido con el aprendizaje continuo y ansioso por aplicar mis habilidades en un entorno profesional dinámico que fomente el crecimiento y la creatividad.</p>
-                    <a href="document/CV - Alexis Arenas.pdf" target="_blank">Ver perfil - HV</a>
-                </section>
-                <img src="img/foto-4x4.jpg" alt="Foto de Perfil">
+                <div class="hero-heading">
+                    <h1 class="hero-title">
+                        <span class="hero-name">Alexis Arenas</span>
+                        <svg class="hero-mural" viewBox="0 0 1200 250" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <clipPath id="hero-letterforms">
+                                    <text class="mural-desktop" x="0" y="205" textLength="1200" lengthAdjust="spacingAndGlyphs">Alexis Arenas</text>
+                                    <text class="mural-mobile" x="0" y="210" textLength="600" lengthAdjust="spacingAndGlyphs">Alexis</text>
+                                    <text class="mural-mobile" x="0" y="440" textLength="600" lengthAdjust="spacingAndGlyphs">Arenas</text>
+                                </clipPath>
+                                <filter id="liquid-merge" x="-30%" y="-60%" width="160%" height="220%" color-interpolation-filters="sRGB">
+                                    <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="soft" />
+                                    <feColorMatrix in="soft" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -10" />
+                                </filter>
+                            </defs>
+                            <g clip-path="url(#hero-letterforms)">
+                                <rect class="mural-base" width="1200" height="250" fill="#F4F8FF" />
+                                <g class="liquid-colors" filter="url(#liquid-merge)"></g>
+                            </g>
+                        </svg>
+                    </h1>
+                </div>
+                <div class="hero-intro"><div class="bio-card"><div class="titulospro">
+                        <h3>Ingeniero de Sistemas (en curso)</h3>
+                        <h3>Desarrollo de software</h3>
+                        <h3>Arquitectura de IA</h3>
+                    </div><p>Soy Alexis Arenas, ingeniero de sistemas en formación y desarrollador de software. Diseño y desarrollo aplicaciones web, sistemas de gestión y soluciones con inteligencia artificial. Mi experiencia incluye proyectos como Zentra, NODO Creativo, FlorentIA, PRISMA y Volao Domicilios, desde la implementación y las pruebas hasta la dirección de proyectos y la identidad visual del producto.</p></div></div>
+            <div class="hero-toolbar"><div class="hero-actions"><a href="document/CV - Alexis Arenas.pdf" target="_blank" rel="noopener noreferrer">Ver perfil - HV</a><a class="button button-ghost" href="#contacto">Contacto</a><button type="button" class="mural-pause" aria-pressed="false">Pausar animación</button></div><figure class="hero-portrait"><img src="img/new foto.png" decoding="async" alt="Foto de Perfil"><figcaption>Alexis Arenas <span>Ocaña / Colombia</span></figcaption></figure></div>
             </section>
         </div>
     </header>
-    <!-- SECTION EDUCATION -->
-    <section id="educacion" class="educacion">
+    <section class="portfolio-gallery" id="portafolio" aria-labelledby="portfolio-title" aria-describedby="portfolio-instructions">
         <div class="contenedor">
-            <div class="content-educacion">
-                <div class="title">
-                    <h1>EDUCACIÓN</h1>
+            <div class="title"><h2 id="portfolio-title">Portafolio</h2><p class="portfolio-instructions" id="portfolio-instructions">Cada carpeta contiene un proyecto. Pulsa su pestaña para ver los detalles y mi participación.</p></div>
+            <div class="portfolio-stack">
+            <article class="portfolio-folder" style="--folder-index: 0">
+                <h3 class="portfolio-folder-heading">
+                    <button type="button" class="portfolio-tab" id="portfolio-tab-zentra" aria-expanded="false" aria-controls="portfolio-panel-zentra">
+                        <span>Zentra</span><span class="portfolio-tab-action">Abrir</span><span class="folder-toggle" aria-hidden="true">+</span>
+                    </button>
+                </h3>
+                <div class="portfolio-shell">
+                    <div class="portfolio-panel" id="portfolio-panel-zentra" role="region" aria-labelledby="portfolio-tab-zentra" aria-hidden="true" inert>
+                        <div class="portfolio-panel-inner">
+                            <div class="portfolio-content">
+                                <a class="portfolio-preview" href="https://amstech.site/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Zentra">
+                                    <img src="img/portfolio/zentra.jpg" alt="Vista de la página web de Zentra" loading="lazy" decoding="async" width="1440" height="960">
+                                </a>
+                                <div class="portfolio-description">
+                                    <p class="project-domain">amstech.site</p>
+                                    <h4>Zentra</h4>
+                                    <p>Desarrollo de Zentra, una plataforma de gestión empresarial.</p>
+                                    <ul class="project-tags" aria-label="Áreas de trabajo"><li>Desarrollo de producto</li><li>Desarrollo web</li></ul>
+                                    <a class="project-link" href="https://amstech.site/" target="_blank" rel="noopener noreferrer">Visitar proyecto</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="articulo">
-                    <i class="fa-solid fa-handshake-angle"></i>
-                    <h3>Asistente Administrativo</h3>
-                    <p>Servicio Nacional de Aprendizaje (SENA)</p>
-                    <p>2022</p>
-                    <a href="document/Diploma Asistente Administrativo.pdf" target="_blank">Ver Documento</a>
+            </article>
+            <article class="portfolio-folder" style="--folder-index: 1">
+                <h3 class="portfolio-folder-heading">
+                    <button type="button" class="portfolio-tab" id="portfolio-tab-nodo-creativo" aria-expanded="false" aria-controls="portfolio-panel-nodo-creativo">
+                        <span>NODO Creativo</span><span class="portfolio-tab-action">Abrir</span><span class="folder-toggle" aria-hidden="true">+</span>
+                    </button>
+                </h3>
+                <div class="portfolio-shell">
+                    <div class="portfolio-panel" id="portfolio-panel-nodo-creativo" role="region" aria-labelledby="portfolio-tab-nodo-creativo" aria-hidden="true" inert>
+                        <div class="portfolio-panel-inner">
+                            <div class="portfolio-content">
+                                <a class="portfolio-preview" href="https://nodo-creativo.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Visitar NODO Creativo">
+                                    <img src="img/portfolio/nodo-creativo.jpg" alt="Vista de la página web de NODO Creativo" loading="lazy" decoding="async" width="1440" height="960">
+                                </a>
+                                <div class="portfolio-description">
+                                    <p class="project-domain">nodo-creativo.vercel.app</p>
+                                    <h4>NODO Creativo</h4>
+                                    <p>Diseño, implementación y pruebas de la página web de NODO Creativo y de su sistema de gestión de clientes.</p>
+                                    <ul class="project-tags" aria-label="Áreas de trabajo"><li>Diseño web</li><li>Implementación</li><li>Pruebas</li><li>Gestión de clientes</li></ul>
+                                    <a class="project-link" href="https://nodo-creativo.vercel.app/" target="_blank" rel="noopener noreferrer">Visitar proyecto</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="articulo">
-                    <!-- <img src="icons/language-solid.svg" alt="" class="icons_images"> -->
-                    <i class="fa-solid fa-language"></i>
-                    <h3>Ingles</h3>
-                    <p>Instituto Nacional en Servicios y Aprendizaje (INESA)</p>
-                    <p>2023</p>
-                    <a href="document/Certificado Ingles INESA.pdf" target="_blank">Ver Documento</a>
+            </article>
+            <article class="portfolio-folder" style="--folder-index: 2">
+                <h3 class="portfolio-folder-heading">
+                    <button type="button" class="portfolio-tab" id="portfolio-tab-florentia" aria-expanded="false" aria-controls="portfolio-panel-florentia">
+                        <span>FlorentIA</span><span class="portfolio-tab-action">Abrir</span><span class="folder-toggle" aria-hidden="true">+</span>
+                    </button>
+                </h3>
+                <div class="portfolio-shell">
+                    <div class="portfolio-panel" id="portfolio-panel-florentia" role="region" aria-labelledby="portfolio-tab-florentia" aria-hidden="true" inert>
+                        <div class="portfolio-panel-inner">
+                            <div class="portfolio-content">
+                                <a class="portfolio-preview" href="https://florentia-landing.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Visitar FlorentIA">
+                                    <img src="img/portfolio/florentia.jpg" alt="Vista de la página web de FlorentIA" loading="lazy" decoding="async" width="1440" height="960">
+                                </a>
+                                <div class="portfolio-description">
+                                    <p class="project-domain">florentia-landing.vercel.app</p>
+                                    <h4>FlorentIA</h4>
+                                    <p>Arquitecto de IA, director del proyecto y líder de identidad visual del producto FlorentIA.</p>
+                                    <ul class="project-tags" aria-label="Áreas de trabajo"><li>Arquitectura de IA</li><li>Dirección de proyecto</li><li>Identidad visual</li></ul>
+                                    <a class="project-link" href="https://florentia-landing.vercel.app/" target="_blank" rel="noopener noreferrer">Visitar proyecto</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </article>
+            <article class="portfolio-folder" style="--folder-index: 3">
+                <h3 class="portfolio-folder-heading">
+                    <button type="button" class="portfolio-tab" id="portfolio-tab-prisma" aria-expanded="false" aria-controls="portfolio-panel-prisma">
+                        <span>PRISMA</span><span class="portfolio-tab-action">Abrir</span><span class="folder-toggle" aria-hidden="true">+</span>
+                    </button>
+                </h3>
+                <div class="portfolio-shell">
+                    <div class="portfolio-panel" id="portfolio-panel-prisma" role="region" aria-labelledby="portfolio-tab-prisma" aria-hidden="true" inert>
+                        <div class="portfolio-panel-inner">
+                            <div class="portfolio-content">
+                                <a class="portfolio-preview" href="https://prisma-nu-amber.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Visitar PRISMA">
+                                    <img src="img/portfolio/prisma.jpg" alt="Vista de la página web de PRISMA" loading="lazy" decoding="async" width="1440" height="960">
+                                </a>
+                                <div class="portfolio-description">
+                                    <p class="project-domain">prisma-nu-amber.vercel.app</p>
+                                    <h4>PRISMA</h4>
+                                    <p>Diseño y desarrollo de la página web de PRISMA.</p>
+                                    <ul class="project-tags" aria-label="Áreas de trabajo"><li>Diseño web</li><li>Desarrollo web</li></ul>
+                                    <a class="project-link" href="https://prisma-nu-amber.vercel.app/" target="_blank" rel="noopener noreferrer">Visitar proyecto</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="portfolio-folder" style="--folder-index: 4">
+                <h3 class="portfolio-folder-heading">
+                    <button type="button" class="portfolio-tab" id="portfolio-tab-volao" aria-expanded="false" aria-controls="portfolio-panel-volao">
+                        <span>Volao Domicilios</span><span class="portfolio-tab-action">Abrir</span><span class="folder-toggle" aria-hidden="true">+</span>
+                    </button>
+                </h3>
+                <div class="portfolio-shell">
+                    <div class="portfolio-panel" id="portfolio-panel-volao" role="region" aria-labelledby="portfolio-tab-volao" aria-hidden="true" inert>
+                        <div class="portfolio-panel-inner">
+                            <div class="portfolio-content">
+                                <a class="portfolio-preview" href="https://volao-nine.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Volao Domicilios">
+                                    <img src="img/portfolio/volao.jpg" alt="Vista de la página web de Volao Domicilios" loading="lazy" decoding="async" width="1440" height="960">
+                                </a>
+                                <div class="portfolio-description">
+                                    <p class="project-domain">volao-nine.vercel.app</p>
+                                    <h4>Volao Domicilios</h4>
+                                    <p>Diseño de la página web, el sistema de administración y la aplicación móvil para domiciliarios, comercios y clientes de Volao Domicilios.</p>
+                                    <ul class="project-tags" aria-label="Áreas de trabajo"><li>Diseño web</li><li>Sistema de administración</li><li>Aplicación móvil</li></ul>
+                                    <a class="project-link" href="https://volao-nine.vercel.app/" target="_blank" rel="noopener noreferrer">Visitar proyecto</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
             </div>
         </div>
     </section>
+    <!-- SECTION EDUCATION -->
+
     <!-- SECCIÓN EXPERIENCIA -->
+    <section class="proof-section" id="resultados" aria-labelledby="results-title" hidden>
+        <div class="contenedor"><div class="title"><h2 id="results-title">Resultados</h2><p>Menos tareas repetitivas. Más espacio para lo importante.</p></div><div class="results-grid" id="results-grid"></div></div>
+    </section>
+    <section class="services" id="servicios" aria-labelledby="services-title">
+        <div class="contenedor">
+            <div class="services-heading">
+                <div class="title"><h2 id="services-title">Servicios</h2><p>Diseño, desarrollo e infraestructura para tu próximo producto.</p></div>
+                <a class="services-contact" href="#contacto">Hablemos de tu proyecto</a>
+            </div>
+            <div class="services-grid">
+                <article class="service-card"><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="26" height="24" rx="5"/><path d="M3 11h26M9 7.5h.01M13 7.5h.01M12 16l-4 4 4 4M20 16l4 4-4 4"/></svg></div><h3>Desarrollo web</h3><p>Sitios y aplicaciones web a la medida de tu negocio. Diseño, implementación y pruebas para llevar tu idea a la web.</p></article>
+                <article class="service-card"><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="26" height="24" rx="5"/><path d="M12 4v24M3 12h9M17 11h7M17 17h7M17 23h4"/></svg></div><h3>Sistemas de gestión</h3><p>Herramientas para organizar clientes, inventario y procesos. Conecta la operación de tu negocio en una sola plataforma.</p></article>
+                <article class="service-card"><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="16" height="28" rx="5"/><path d="M13 6h6M15 26h2M12 14l3 3 5-6"/></svg></div><h3>Aplicaciones móviles</h3><p>Aplicaciones para clientes, comercios y equipos de operación. Experiencias pensadas para el uso cotidiano desde el celular.</p></article>
+                <article class="service-card"><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 6a5 5 0 0 0-9 3 5 5 0 0 0-2 9 5 5 0 0 0 6 8 5 5 0 0 0 5-3V6Zm0 0a5 5 0 0 1 9 3 5 5 0 0 1 2 9 5 5 0 0 1-6 8 5 5 0 0 1-5-3M9 11l3 3M7 20l5-2M23 11l-3 3M25 20l-5-2"/></svg></div><h3>Inteligencia artificial</h3><p>Arquitectura e integración de IA en productos digitales, con un enfoque en las necesidades y la experiencia de sus usuarios.</p></article>
+                <article class="service-card"><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="24" height="10" rx="4"/><rect x="4" y="19" width="24" height="10" rx="4"/><path d="M10 8h.01M15 8h7M10 24h.01M15 24h7M16 13v6"/></svg></div><h3>Servidores y comunicaciones</h3><p>Administración de servidores Linux y soluciones de telefonía con Asterisk para apoyar la operación de tu empresa.</p></article>
+                <article class="service-card"><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="12" height="12" rx="4"/><circle cx="24" cy="9" r="6"/><path d="m9 19 6 10H3l6-10Z"/><rect x="19" y="19" width="10" height="10" rx="3"/></svg></div><h3>Identidad de producto</h3><p>Dirección visual y diseño de interfaces para que tu producto tenga una identidad clara, coherente y reconocible.</p></article>
+            </div>
+        </div>
+    </section>
+    <section class="work-process" id="como-trabajo" aria-labelledby="process-title">
+        <div class="contenedor">
+            <div class="process-heading"><div class="title"><h2 id="process-title">Cómo trabajo</h2><p>De entender tu idea a ponerla en marcha, paso a paso.</p></div><a class="services-contact" href="#contacto">Cuéntame tu idea</a></div>
+            <ol class="process-steps">
+                <li class="process-step"><span class="process-marker" aria-hidden="true">01</span><div class="process-copy"><h3>Entender la necesidad</h3><p>Escucho lo que necesitas y defino contigo el problema y el objetivo del proyecto.</p></div></li>
+                <li class="process-step"><span class="process-marker" aria-hidden="true">02</span><div class="process-copy"><h3>Presentar una propuesta</h3><p>Te entrego una propuesta de solución y un alcance para revisar.</p></div></li>
+                <li class="process-step"><span class="process-marker" aria-hidden="true">03</span><div class="process-copy"><h3>Ajustar contigo</h3><p>Incorporo tus comentarios y los ajustes acordados antes de iniciar el desarrollo.</p></div></li>
+                <li class="process-step"><span class="process-marker" aria-hidden="true">04</span><div class="process-copy"><h3>Desarrollar la solución</h3><p>Inicio el desarrollo a partir de la propuesta ajustada a tus necesidades.</p></div></li>
+                <li class="process-step"><span class="process-marker" aria-hidden="true">05</span><div class="process-copy"><h3>Entregar el proyecto</h3><p>Presento la solución terminada y la entrego para que puedas empezar a utilizarla.</p></div></li>
+            </ol>
+        </div>
+    </section>
     <section class="experiencia"  id="experiencia">
         <div class="contenedor">
             <div class="content-experience">
                 <div class="title">
-                    <h1>EXPERIENCIA</h1>
+                    <h2>EXPERIENCIA</h2>
                 </div>
                 <!-- <div class="experience">
-                    <img src="" alt="">
                     <h2>Almacen Calzamax</h2>
                     <h3>Asesor de Ventas, 2020 - 2023</h3>
                     <p>• Ofrecí asesoramiento experto en ventas dentro del Almacén Calzamax durante el periodo 2020-2023.</p>
                     <p>• Contribuí al éxito del equipo de ventas mediante la consecución de objetivos y la mejora continua del servicio al cliente.</p>
                     <p>• Desarrollé habilidades de comunicación efectiva y negociación para cerrar ventas de manera exitosa.</p>
                 </div> -->
-                <div class="experience">
-                    <img src="icons/logo_softech.png" alt="SoftTech Systems" style="border-radius: 10%;">
-                    <h2>SoftTech Systems</h2>
-                    <h3>Fundador y Presidente, 2024 | Actual</h3>
-                    <p>• Dirijo SoftTech Systems, una empresa dedicada al desarrollo de software.</p>
-                    <p>• Responsable de la planificación estratégica, investigación de mercado y desarrollo del plan de negocios.</p>
-                    <p>• Diseñé la visión y la misión de la empresa, estableciendo los objetivos iniciales y la estrategia de lanzamiento.</p>
-                    <p>• Investigo y evalúo tecnologías emergentes y tendencias del mercado para integrarlas en la estrategia de productos y servicios de SoftTech Systems.</p>
-                    <p>• Desarrollo e implementación de páginas web y sistemas de gestión adaptados a clientes.</p>
-                    <p>• Mantenimiento, actualización y soporte de software creado por la empresa.</p>
-                    <p>• Atención y soporte técnico a clientes, resolviendo incidencias de manera remota y presencial.</p>
-                    <p>• Instalación, configuración y optimización de software y herramientas tecnológicas.</p>
-                    <p>• Capacitación y acompañamiento a usuarios en el uso de las soluciones desarrolladas.</p>
-                    <p>• Elaboración de manuales de usuario y documentación técnica para clientes y equipo interno.</p>
-                    <p>• Aseguramiento de la continuidad operativa mediante monitoreo de servicios y respuesta a incidentes.</p>
+                <article class="experience experience-prisma">
+                    <div class="experience-cover"><img src="img/portfolio/prisma.jpg" alt="Página web de PRISMA" loading="lazy" decoding="async" width="1440" height="960"></div>
+                    <div class="experience-inner"><div class="experience-identity"><img src="icons/logo_prisma.png" decoding="async" alt="PRISMA" style="border-radius: 10%;"><div><h2>PRISMA</h2><h3>Fundador y Presidente, 2024 | Actual</h3></div></div><div class="experience-copy"><p class="experience-mobile-summary">Desarrollo de software a medida y dirección de proyectos en PRISMA.</p><details class="experience-details" open><summary><span class="experience-show-label">Ver responsabilidades</span><span class="experience-hide-label">Ocultar responsabilidades</span><span class="experience-details-mark" aria-hidden="true">+</span></summary><div class="experience-details-content"><div class="experience-lead"><p>• Dirijo PRISMA, una empresa dedicada al desarrollo de software.</p></div><div class="experience-responsibilities"><p>• Responsable de la planificación estratégica, investigación de mercado y desarrollo del plan de negocios.</p>
+<p>• Diseñé la visión y la misión de la empresa, estableciendo los objetivos iniciales y la estrategia de lanzamiento.</p>
+<p>• Investigo y evalúo tecnologías emergentes y tendencias del mercado para integrarlas en la estrategia de productos y servicios de PRISMA.</p>
+<p>• Desarrollo e implementación de páginas web y sistemas de gestión adaptados a clientes.</p>
+<p>• Mantenimiento, actualización y soporte de software creado por la empresa.</p>
+<p>• Atención y soporte técnico a clientes, resolviendo incidencias de manera remota y presencial.</p>
+<p>• Instalación, configuración y optimización de software y herramientas tecnológicas.</p>
+<p>• Capacitación y acompañamiento a usuarios en el uso de las soluciones desarrolladas.</p>
+<p>• Elaboración de manuales de usuario y documentación técnica para clientes y equipo interno.</p>
+<p>• Aseguramiento de la continuidad operativa mediante monitoreo de servicios y respuesta a incidentes.</p></div></div></details></div>
+                    <div class="experience-footer"><ul class="experience-tags" aria-label="Áreas de experiencia"><li>Desarrollo de software</li><li>Dirección de proyectos</li></ul><a class="experience-link" href="https://prisma-nu-amber.vercel.app/" target="_blank" rel="noopener noreferrer">Ver proyecto</a></div></div>
+                </article>
+                <article class="experience experience-florentia">
+                    <div class="experience-cover"><img src="img/portfolio/florentia.jpg" alt="Página web de FlorentIA" loading="lazy" decoding="async" width="1440" height="960"></div>
+                    <div class="experience-inner"><div class="experience-identity"><img src="icons/logo-fondo.jpg" decoding="async" alt="FlorentIA" style="border-radius: 10%;"><div><h2>FlorentIA</h2><h3>Líder del Proyecto, 2024 | Actual</h3></div></div><div class="experience-copy"><p class="experience-mobile-summary">Arquitectura de IA, dirección del proyecto e identidad visual de FlorentIA.</p><details class="experience-details" open><summary><span class="experience-show-label">Ver responsabilidades</span><span class="experience-hide-label">Ocultar responsabilidades</span><span class="experience-details-mark" aria-hidden="true">+</span></summary><div class="experience-details-content"><div class="experience-lead"><p>• Ideé y lidero el desarrollo de <strong>FlorentIA</strong>, una plataforma educativa que utiliza inteligencia artificial para representar el progreso académico de los estudiantes mediante jardines virtuales.</p></div><div class="experience-responsibilities"><p>• Dividí el proyecto en tres fases estratégicas: diseño conceptual, desarrollo funcional sin IA y posterior integración de modelos inteligentes.</p>
+<p>• Desarrollé la interfaz gráfica en Unity 2D con un enfoque lúdico, dirigida a niños de sexto y séptimo grado, especialmente en el área de inglés.</p>
+<p>• Coordiné las pruebas piloto en alianza con instituciones educativas, recopilando datos y observaciones para mejorar la experiencia de usuario.</p>
+<p>• Presenté FlorentIA en la feria de proyectos universitarios 2025, destacando su impacto positivo en la motivación y aprendizaje de los estudiantes.</p>
+<p>• Brindé soporte técnico a docentes y estudiantes durante las pruebas piloto, resolviendo incidencias en el uso de la plataforma.</p>
+<p>• Realicé la instalación, configuración y actualización del software en los entornos de prueba.</p>
+<p>• Elaboré guías rápidas y documentación de usuario para facilitar la adopción de la herramienta.</p>
+<p>• Ofrecí capacitación básica a docentes en el uso de la plataforma, asegurando su correcta implementación en el aula.</p></div></div></details></div>
+                    <div class="experience-footer"><ul class="experience-tags" aria-label="Áreas de experiencia"><li>Inteligencia artificial</li><li>Producto educativo</li></ul><a class="experience-link" href="https://florentia-landing.vercel.app/" target="_blank" rel="noopener noreferrer">Ver proyecto</a></div></div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARRUSEL DE EXPERIENCIA -->
+
+
+
+    <!-- SECCIÓN HABILIDADES -->
+    <section id="educacion" class="educacion">
+        <div class="contenedor">
+            <div class="content-educacion">
+                <div class="title">
+                    <h2>EDUCACIÓN</h2>
                 </div>
-                <div class="experience">
-                    <img src="icons/logo-fondo.jpg" alt="FlorentIA" style="border-radius: 10%;">
-                    <h2>FlorentIA</h2>
-                    <h3>Líder del Proyecto, 2024 | Actual</h3>
-                    <p>• Ideé y lidero el desarrollo de <strong>FlorentIA</strong>, una plataforma educativa que utiliza inteligencia artificial para representar el progreso académico de los estudiantes mediante jardines virtuales.</p>
-                    <p>• Dividí el proyecto en tres fases estratégicas: diseño conceptual, desarrollo funcional sin IA y posterior integración de modelos inteligentes.</p>
-                    <p>• Desarrollé la interfaz gráfica en Unity 2D con un enfoque lúdico, dirigida a niños de sexto y séptimo grado, especialmente en el área de inglés.</p>
-                    <p>• Coordiné las pruebas piloto en alianza con instituciones educativas, recopilando datos y observaciones para mejorar la experiencia de usuario.</p>
-                    <p>• Presenté FlorentIA en la feria de proyectos universitarios 2025, destacando su impacto positivo en la motivación y aprendizaje de los estudiantes.</p>
-                    <p>• Brindé soporte técnico a docentes y estudiantes durante las pruebas piloto, resolviendo incidencias en el uso de la plataforma.</p>
-                    <p>• Realicé la instalación, configuración y actualización del software en los entornos de prueba.</p>
-                    <p>• Elaboré guías rápidas y documentación de usuario para facilitar la adopción de la herramienta.</p>
-                    <p>• Ofrecí capacitación básica a docentes en el uso de la plataforma, asegurando su correcta implementación en el aula.</p>
+                <div class="articulo">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    <h3>Asistente Administrativo</h3>
+                    <p>Servicio Nacional de Aprendizaje (SENA)</p>
+                    <p>2022</p>
+                    <a href="document/Diploma Asistente Administrativo.pdf" target="_blank" rel="noopener noreferrer">Ver Documento</a>
+                </div>
+                <div class="articulo">
+                    <!-- <img src="icons/language-solid.svg" decoding="async" alt="" class="icons_images"> -->
+                    <i class="fa-solid fa-language"></i>
+                    <h3>Ingles</h3>
+                    <p>Instituto Nacional en Servicios y Aprendizaje (INESA)</p>
+                    <p>2023</p>
+                    <a href="document/Certificado Ingles INESA.pdf" target="_blank" rel="noopener noreferrer">Ver Documento</a>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- CARRUSEL DE EXPERIENCIA -->
-<section class="carrusel-experiencia">
-    <div class="contenedor">
-        <div class="title">
-            <h1>EXPERIENCIA REAL</h1>
-        </div>
-        <div class="carrusel-contenedor">
-            <div class="carrusel-desliza">
-                <!-- Elemento 1 del carrusel -->
-                <div class="carrusel-elemento">
-                    <div class="contenedor-imagen">
-                        <img src="icons/logo_softech.png" alt="Logo SoftTech Systems" class="carrusel-imagen">
-                    </div>
-                    <div class="carrusel-texto">
-                        <h3>Fundación de SoftTech Systems</h3>
-                        <p>SoftTech Systems nace como una empresa tecnológica enfocada en el desarrollo de páginas web, optimización de procesos empresariales y consultoría en TI. Se consolidó como proyecto académico y hoy avanza hacia un modelo empresarial con proyección real en el mercado.</p>
-                    </div>
-                </div>
-                <!-- Elemento 2 del carrusel -->
-                <div class="carrusel-elemento">
-                    <div class="contenedor-imagen">
-                        <img src="img/1.jpg" alt="Diseño de FlorentIA" class="carrusel-imagen">
-                    </div>
-                    <div class="carrusel-texto">
-                        <h3>FlorentIA - Desarrollo de Plataforma Educativa</h3>
-                        <p>FlorentIA es una plataforma educativa dirigida a estudiantes de sexto y séptimo grado. Su diseño integra un enfoque dinámico basado en inteligencia artificial y jardines virtuales para representar el progreso de los estudiantes en el aprendizaje del inglés.</p>
-                    </div>
-                </div>
-                <!-- Elemento 3 del carrusel -->
-                <div class="carrusel-elemento">
-                    <div class="contenedor-imagen">
-                        <img src="img/3.jpg" alt="Presentación FlorentIA" class="carrusel-imagen">
-                    </div>
-                    <div class="carrusel-texto">
-                        <h3>Presentación de Interfaz - Abril 2025</h3>
-                        <p>La primera versión de la interfaz de FlorentIA fue presentada el 8 de abril de 2025, mostrando el diseño inicial sin el modelo de IA. Esta etapa marcó el inicio de pruebas y retroalimentación con estudiantes y docentes.</p>
-                    </div>
-                </div>
-                <!-- Elemento 4 del carrusel -->
-                <div class="carrusel-elemento">
-                    <div class="contenedor-imagen">
-                        <img src="img/2.jpg" alt="Pruebas FlorentIA con colegios" class="carrusel-imagen">
-                    </div>
-                    <div class="carrusel-texto">
-                        <h3>Pruebas Piloto en Instituciones Educativas</h3>
-                        <p>Las pruebas piloto de FlorentIA se realizan con el Instituto Técnico Carlos Hernández Yaruro, permitiendo validar la funcionalidad de la plataforma en un entorno real y recoger aportes valiosos de estudiantes y profesores.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <a class="carrusel-prev" onclick="moverCarrusel(-1)">❮</a>
-            <a class="carrusel-next" onclick="moverCarrusel(1)">❯</a>
-        </div>
-        
-        <div class="carrusel-puntos">
-            <span class="punto" onclick="slideActual(1)"></span>
-            <span class="punto" onclick="slideActual(2)"></span>
-            <span class="punto" onclick="slideActual(3)"></span>
-            <span class="punto" onclick="slideActual(4)"></span>
-        </div>
-    </div>
-</section>
-
-    
-    <!-- SECCIÓN HABILIDADES -->
     <section id="habilidades" class="habilidades">
         <div class="contenedor">
             <div class="title">
-                <h1>HABILIDADES</h1>
-            </div>
+                    <h2>HABILIDADES</h2>
+                </div>
             <div class="content-skills">
                 <div class="skills">
                     <h2>Programación</h2>
-                    <img src="icons/java-logo.png" alt="" title="" class="softskills">
-                    <img src="icons/JavaScript-logo.png" alt="" title="" class="softskills">
-                    <img src="icons/python.png" alt="" title="" class="softskills">
-                    <img src="" alt="" title="" class="softskills">
+                    <span class="skill-item"><img src="icons/java-logo.png" decoding="async" alt="Java" title="Java" class="softskills"><span>Java</span></span>
+                    <span class="skill-item"><img src="icons/JavaScript-logo.png" decoding="async" alt="JavaScript" title="JavaScript" class="softskills"><span>JavaScript</span></span>
+                    <span class="skill-item"><img src="icons/typescript.svg" alt="" aria-hidden="true" decoding="async" class="softskills"><span>TypeScript</span></span>
+                    <span class="skill-item"><img src="icons/python.svg" decoding="async" alt="Python" title="Python" class="softskills"><span>Python</span></span>
                 </div>
                 <div class="skills">
                     <h2>Frameworks</h2>
-                    <img src="icons/astro_logo-removebg-preview.png" alt="" title="" class="softskills">
-                    <img src="icons/Tailwind_logo.png" alt="" title="" class="softskills">
-                    <img src="" alt="" title="" class="softskills">
-                    <img src="" alt="" title="" class="softskills">
+                    <span class="skill-item"><img src="icons/astro_logo-removebg-preview.png" decoding="async" alt="Astro" title="Astro" class="softskills"><span>Astro</span></span>
+                    <span class="skill-item"><img src="icons/Tailwind_logo.png" decoding="async" alt="Tailwind CSS" title="Tailwind CSS" class="softskills"><span>Tailwind CSS</span></span>
+                    <span class="skill-item"><img src="icons/vue.svg" alt="" aria-hidden="true" decoding="async" class="softskills"><span>Vue</span></span>
+                    <span class="skill-item"><img src="icons/react.svg" alt="" aria-hidden="true" decoding="async" class="softskills"><span>React</span></span>
+                    <span class="skill-item"><img src="icons/nestjs.svg" alt="" aria-hidden="true" decoding="async" class="softskills"><span>NestJS</span></span>
+                    <span class="skill-item"><img src="icons/express.svg" alt="" aria-hidden="true" decoding="async" class="softskills skill-icon-ink"><span>Express.js</span></span>
                 </div>
                 <!-- <div class="skills">
                     <h2>Frameworks</h2>
-                    <img src="" alt="" title="" class="softskills">
-                    <img src="" alt="" title="" class="softskills">
-                    <img src="" alt="" title="" class="softskills">
-                    <img src="" alt="" title="" class="softskills">
                 </div> -->
                 <div class="skills">
                     <h2>Bases de Datos</h2>
-                    <img src="icons/firebase.png" alt="" title="" class="softskills">
-                    <img src="" alt="" title="" class="softskills">
-                    <img src="" alt="" title="" class="softskills">
-                    <img src="" alt="" title="" class="softskills">
+                    <span class="skill-item"><img src="icons/firebase.png" decoding="async" alt="Firebase" title="Firebase" class="softskills"><span>Firebase</span></span>
+                    <span class="skill-item"><img src="icons/mysql.svg" alt="" aria-hidden="true" decoding="async" class="softskills"><span>MySQL</span></span>
+                    <span class="skill-item"><img src="icons/mongodb.svg" alt="" aria-hidden="true" decoding="async" class="softskills"><span>MongoDB</span></span>
                 </div>
                 <div class="skills">
                     <h2>Tecnologías</h2>
-                    <img src="icons/html_logo.png" alt="" title="" class="softskills">
-                    <img src="icons/css_logo.png" alt="" title="" class="softskills">
-                    <img src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png" alt="" title="" class="softskills">
-                    <img src="icons/github_logo.png" alt="" title="" class="softskills">
-                    <img src="icons/git_logo.png" alt="" title="" class="softskills">
+                    <span class="skill-item"><img src="icons/html_logo.png" decoding="async" alt="HTML" title="HTML" class="softskills"><span>HTML</span></span>
+                    <span class="skill-item"><img src="icons/css_logo.png" decoding="async" alt="CSS" title="CSS" class="softskills"><span>CSS</span></span>
+                    <span class="skill-item"><img src="icons/nodejs.svg" alt="Node.js" title="Node.js" class="softskills"><span>Node.js</span></span>
+                    <span class="skill-item"><img src="icons/github_logo.png" decoding="async" alt="GitHub" title="GitHub" class="softskills skill-icon-ink"><span>GitHub</span></span>
+                    <span class="skill-item"><img src="icons/git_logo.png" decoding="async" alt="Git" title="Git" class="softskills"><span>Git</span></span>
+                    <span class="skill-item"><img src="icons/docker.png" decoding="async" alt="" aria-hidden="true" class="softskills"><span>Docker</span></span>
+                    <span class="skill-item"><img src="icons/linux.svg" alt="" aria-hidden="true" decoding="async" class="softskills"><span>Linux</span></span>
+                    <span class="skill-item"><img src="icons/server-administration.svg" alt="" aria-hidden="true" decoding="async" class="softskills"><span>Administración de servidores</span></span>
                 </div>
                 <div class="skills">
                     <h2>Blandas</h2>
-                    <img src="icons/compromiso.png" alt="" title="" class="softskills">
-                    <img src="icons/comunicacion.png" alt="" title="" class="softskills">
-                    <img src="icons/creatividad.png" alt="" title="" class="softskills">
-                    <img src="icons/equipo.png" alt="" title="" class="softskills">
+                    <span class="skill-item"><img src="icons/compromiso.png" decoding="async" alt="Compromiso" title="Compromiso" class="softskills"><span>Compromiso</span></span>
+                    <span class="skill-item"><img src="icons/comunicacion.png" decoding="async" alt="Comunicación" title="Comunicación" class="softskills"><span>Comunicación</span></span>
+                    <span class="skill-item"><img src="icons/creatividad.png" decoding="async" alt="Creatividad" title="Creatividad" class="softskills"><span>Creatividad</span></span>
+                    <span class="skill-item"><img src="icons/equipo.png" decoding="async" alt="Trabajo en equipo" title="Trabajo en equipo" class="softskills"><span>Trabajo en equipo</span></span>
                 </div>
             </div>
         </div>
     </section>
     <!-- SECCIÓN CERTIFICADOS -->
-    <section id="certificados" class="certificados">
+    <section id="certificados" class="certificados" aria-labelledby="certificates-title">
         <div class="contenedor">
-            <div class="title">
-                <h1>CERTIFICADOS</h1>
-            </div>            
-            <div class="content-certificados">
-                <div class="certificate">
-                    <img src="img/English dot works 1.png" alt="English Dot Works">
-                    <h3>English dot Works</h3>
-                    <h4>SENA - 2020</h4>
-                    <a href="document/Certificado English dot works 1.pdf" target="_blank">Ver</a>
-                </div>
-                <div class="certificate">
-                    <img src="img/Clase espejo I.png" alt="Clase Espejo I">
-                    <h3>Clase Espejo Interinstitucional Condicionales y Bucles</h3>
-                    <h4>2024</h4>
-                    <a href="document/Certificado clase espejo I.pdf" target="_blank">Ver</a>
-                </div>
-                <div class="certificate">
-                    <img src="img/Programación Basica.png" alt="Programación Basica">
-                    <h3>Curso de Programación Basica</h3>
-                    <h4>PLATZI - 2024</h4>
-                    <a href="document/diploma-programacion-basica.pdf" target="_blank">Ver</a>
-                </div>
-                <div class="certificate">
-                    <img src="img/Clase espejo II.png" alt="Clase Espejo II">
-                    <h3>Clase Espejo Interinstitucional Estructuras de Datos</h3>
-                    <h4>2024</h4>
-                    <a href="document/Certificado clase espejo II.pdf" target="_blank">Ver</a>
-                </div>
-                <div class="certificate">
-                    <img src="img/Estructuras de Control.png" alt="Estructuras de control">
-                    <h3>Variables y estructuras de control en la Programación Orientada a Objetos</h3>
-                    <h4>SENA - 2024</h4>
-                    <a href="document/9121002985819CC1091969635C.pdf" target="_blank">Ver</a>
-                </div>
-                <div class="certificate">
-                    <img src="img/Marca_perspnal.png" alt="Curso Marca Personal">
-                    <h3>Curso de Marca Personal</h3>
-                    <h4>PLATZI - 2024</h4>
-                    <a href="document/diploma-marca-personal.pdf" target="_blank">Ver</a>
-                </div>
-                <div class="certificate">
-                    <img src="img/Estrategias de aprendizaje ingles.png" alt="Estrategias de Aprendizaje">
-                    <h3>Estrategias para aprender Inglés</h3>
-                    <h4>PLATZI - 2024</h4>
-                    <a href="document/diploma-estrategias-ingles.pdf" target="_blank">Ver</a>
-                </div>
-                <div class="certificate">
-                    <img src="img/python.png" alt="Python bases">
-                    <h3>Introducción a la Programación con Python</h3>
-                    <h4>Santander Open Academy - 2024</h4>
-                    <a href="document/Python.pdf" target="_blank">Ver</a>
-                </div>
-                <div class="certificate">
-                    <img src="img/ciencia de datos.png" alt="Ciencia de datos">
-                    <h3>Introducción a la Ciencia de Datos</h3>
-                    <h4>Santander Open Academy - 2024</h4>
-                    <a href="document/Ciencia de datos.pdf" target="_blank">Ver</a>
-                </div>
-                <div class="certificate">
-                    <img src="img/IA.png" alt="Ciencia de datos">
-                    <h3>Inteligencia Articial y Productividad</h3>
-                    <h4>Santander Open Academy - 2024</h4>
-                    <a href="document/certificado-IA.pdf" target="_blank">Ver</a>
-                </div>
-                <div class="certificate">
-                    <img src="img/ing-software.png" alt="Ciencia de datos">
-                    <h3>Fundamentos de Ingeniería de Software</h3>
-                    <h4>PLATZI - 2024</h4>
-                    <a href="document/diploma-ingenieria.pdf" target="_blank">Ver</a>
-                </div>
-                <div class="certificate">
-                    <img src="img/Java-script.png" alt="Ciencia de datos">
-                    <h3>Fundamentos de JavaScript</h3>
-                    <h4>PLATZI - 2024</h4>
-                    <a href="document/diploma-javascript.pdf" target="_blank">Ver</a>
-                </div>
-                <div class="certificate">
-                    <img src="img/git-github.png" alt="Ciencia de datos">
-                    <h3>Git y GitHub</h3>
-                    <h4>PLATZI - 2024</h4>
-                    <a href="document/diploma-git-github.pdf" target="_blank">Ver</a>
-                </div>
-                <div class="certificate">
-                    <img src="img/bootcamp programacion.png" alt="Ciencia de datos">
-                    <h3>Bootcamp Programación</h3>
-                    <h4>Ministerio TIC - 2025</h4>
-                    <a href="document/Bootcamp Programacion.pdf" target="_blank">Ver</a>
-                </div>
+            <div class="certificates-section-heading"><div class="title"><h2 id="certificates-title">Certificados</h2><p>Una selección de mi formación en desarrollo, ingeniería e inteligencia artificial.</p></div><span class="certificates-total">15 certificados</span></div>
+            <div class="certificates-featured">
+                <article class="certificate certificate-featured">
+                    <div class="certificate-heading"><span class="certificate-symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V9l-6-6Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><span class="certificate-category">Innovación</span><span class="certificate-filetype">PDF</span></div>
+                    <h3 class="certificate-title">Ponente XIII Encuentro Internacional de Innovación Tecnológica</h3>
+                    <p class="certificate-meta">Universidad Francisco de Paula Santander Ocaña - 2026</p>
+                    <div class="certificate-tools"><a class="certificate-open" href="document/ponencia encuentro .pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Ponente XIII Encuentro Internacional de Innovación Tecnológica">Abrir PDF</a><details class="certificate-visual"><summary aria-label="Vista previa de Ponente XIII Encuentro Internacional de Innovación Tecnológica">Vista previa<span aria-hidden="true">+</span></summary><a class="certificate-preview-frame" href="document/ponencia encuentro .pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Ponente XIII Encuentro Internacional de Innovación Tecnológica"><img src="img/ponencia encuentro.png" alt="Ciencia de datos" width="640" height="450" loading="lazy" decoding="async"></a></details></div>
+                </article>
+                <article class="certificate certificate-featured">
+                    <div class="certificate-heading"><span class="certificate-symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V9l-6-6Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><span class="certificate-category">Desarrollo</span><span class="certificate-filetype">PDF</span></div>
+                    <h3 class="certificate-title">Bootcamp Programación</h3>
+                    <p class="certificate-meta">Ministerio TIC - 2025</p>
+                    <div class="certificate-tools"><a class="certificate-open" href="document/Bootcamp Programacion.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Bootcamp Programación">Abrir PDF</a><details class="certificate-visual"><summary aria-label="Vista previa de Bootcamp Programación">Vista previa<span aria-hidden="true">+</span></summary><a class="certificate-preview-frame" href="document/Bootcamp Programacion.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Bootcamp Programación"><img src="img/bootcamp programacion.png" alt="Ciencia de datos" width="640" height="450" loading="lazy" decoding="async"></a></details></div>
+                </article>
+                <article class="certificate certificate-featured">
+                    <div class="certificate-heading"><span class="certificate-symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V9l-6-6Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><span class="certificate-category">Inteligencia artificial</span><span class="certificate-filetype">PDF</span></div>
+                    <h3 class="certificate-title">Inteligencia Articial y Productividad</h3>
+                    <p class="certificate-meta">Santander Open Academy - 2024</p>
+                    <div class="certificate-tools"><a class="certificate-open" href="document/certificado-IA.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Inteligencia Articial y Productividad">Abrir PDF</a><details class="certificate-visual"><summary aria-label="Vista previa de Inteligencia Articial y Productividad">Vista previa<span aria-hidden="true">+</span></summary><a class="certificate-preview-frame" href="document/certificado-IA.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Inteligencia Articial y Productividad"><img src="img/IA.png" alt="Ciencia de datos" width="640" height="450" loading="lazy" decoding="async"></a></details></div>
+                </article>
+                <article class="certificate certificate-featured">
+                    <div class="certificate-heading"><span class="certificate-symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V9l-6-6Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><span class="certificate-category">Ingeniería</span><span class="certificate-filetype">PDF</span></div>
+                    <h3 class="certificate-title">Fundamentos de Ingeniería de Software</h3>
+                    <p class="certificate-meta">PLATZI - 2024</p>
+                    <div class="certificate-tools"><a class="certificate-open" href="document/diploma-ingenieria.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Fundamentos de Ingeniería de Software">Abrir PDF</a><details class="certificate-visual"><summary aria-label="Vista previa de Fundamentos de Ingeniería de Software">Vista previa<span aria-hidden="true">+</span></summary><a class="certificate-preview-frame" href="document/diploma-ingenieria.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Fundamentos de Ingeniería de Software"><img src="img/ing-software.png" alt="Ciencia de datos" width="640" height="450" loading="lazy" decoding="async"></a></details></div>
+                </article>
             </div>
-        </div>
-    </section>
-    <!-- Informacion personal -->
-    <section id="infopersonal" class="inforpersonal">
-        <div class="contenedor">
-            <div class="title">
-                <h1>INFORMACIÓN PERSONAL</h1>
-            </div>  
-            <div class="content-infopersonal">                
-                <div class="space-infoperson element-one">
-                    <img src="icons/alexis.png" alt="Logo Page">
+            <details class="certificates-archive">
+                <summary><span class="archive-when-closed">Ver todos los certificados</span><span class="archive-when-open">Mostrar solo destacados</span><span class="archive-count">11 más</span><span class="archive-toggle" aria-hidden="true">+</span></summary>
+                <div class="certificates-list">
+                    <article class="certificate-archive-row">
+                        <details class="certificate-detail"><summary><span class="certificate-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V9l-6-6Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><span class="certificate-row-copy"><span class="certificate-row-title">English dot Works</span><span class="certificate-row-meta">SENA - 2020</span></span><span class="certificate-row-toggle" aria-hidden="true">+</span></summary><a class="certificate-preview-frame" href="document/Certificado English dot works 1.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de English dot Works"><img src="img/English dot works 1.png" alt="English Dot Works" width="640" height="450" loading="lazy" decoding="async"></a></details>
+                        <a class="certificate-row-pdf" href="document/Certificado English dot works 1.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de English dot Works">PDF</a>
+                    </article>
+                    <article class="certificate-archive-row">
+                        <details class="certificate-detail"><summary><span class="certificate-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V9l-6-6Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><span class="certificate-row-copy"><span class="certificate-row-title">Clase Espejo Interinstitucional Condicionales y Bucles</span><span class="certificate-row-meta">2024</span></span><span class="certificate-row-toggle" aria-hidden="true">+</span></summary><a class="certificate-preview-frame" href="document/Certificado clase espejo I.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Clase Espejo Interinstitucional Condicionales y Bucles"><img src="img/Clase espejo I.png" alt="Clase Espejo I" width="640" height="450" loading="lazy" decoding="async"></a></details>
+                        <a class="certificate-row-pdf" href="document/Certificado clase espejo I.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Clase Espejo Interinstitucional Condicionales y Bucles">PDF</a>
+                    </article>
+                    <article class="certificate-archive-row">
+                        <details class="certificate-detail"><summary><span class="certificate-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V9l-6-6Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><span class="certificate-row-copy"><span class="certificate-row-title">Curso de Programación Basica</span><span class="certificate-row-meta">PLATZI - 2024</span></span><span class="certificate-row-toggle" aria-hidden="true">+</span></summary><a class="certificate-preview-frame" href="document/diploma-programacion-basica.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Curso de Programación Basica"><img src="img/Programación Basica.png" alt="Programación Basica" width="640" height="450" loading="lazy" decoding="async"></a></details>
+                        <a class="certificate-row-pdf" href="document/diploma-programacion-basica.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Curso de Programación Basica">PDF</a>
+                    </article>
+                    <article class="certificate-archive-row">
+                        <details class="certificate-detail"><summary><span class="certificate-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V9l-6-6Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><span class="certificate-row-copy"><span class="certificate-row-title">Clase Espejo Interinstitucional Estructuras de Datos</span><span class="certificate-row-meta">2024</span></span><span class="certificate-row-toggle" aria-hidden="true">+</span></summary><a class="certificate-preview-frame" href="document/Certificado clase espejo II.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Clase Espejo Interinstitucional Estructuras de Datos"><img src="img/Clase espejo II.png" alt="Clase Espejo II" width="640" height="450" loading="lazy" decoding="async"></a></details>
+                        <a class="certificate-row-pdf" href="document/Certificado clase espejo II.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Clase Espejo Interinstitucional Estructuras de Datos">PDF</a>
+                    </article>
+                    <article class="certificate-archive-row">
+                        <details class="certificate-detail"><summary><span class="certificate-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V9l-6-6Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><span class="certificate-row-copy"><span class="certificate-row-title">Variables y estructuras de control en la Programación Orientada a Objetos</span><span class="certificate-row-meta">SENA - 2024</span></span><span class="certificate-row-toggle" aria-hidden="true">+</span></summary><a class="certificate-preview-frame" href="document/9121002985819CC1091969635C.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Variables y estructuras de control en la Programación Orientada a Objetos"><img src="img/Estructuras de Control.png" alt="Estructuras de control" width="640" height="450" loading="lazy" decoding="async"></a></details>
+                        <a class="certificate-row-pdf" href="document/9121002985819CC1091969635C.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Variables y estructuras de control en la Programación Orientada a Objetos">PDF</a>
+                    </article>
+                    <article class="certificate-archive-row">
+                        <details class="certificate-detail"><summary><span class="certificate-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V9l-6-6Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><span class="certificate-row-copy"><span class="certificate-row-title">Curso de Marca Personal</span><span class="certificate-row-meta">PLATZI - 2024</span></span><span class="certificate-row-toggle" aria-hidden="true">+</span></summary><a class="certificate-preview-frame" href="document/diploma-marca-personal.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Curso de Marca Personal"><img src="img/Marca_perspnal.png" alt="Curso Marca Personal" width="640" height="450" loading="lazy" decoding="async"></a></details>
+                        <a class="certificate-row-pdf" href="document/diploma-marca-personal.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Curso de Marca Personal">PDF</a>
+                    </article>
+                    <article class="certificate-archive-row">
+                        <details class="certificate-detail"><summary><span class="certificate-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V9l-6-6Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><span class="certificate-row-copy"><span class="certificate-row-title">Estrategias para aprender Inglés</span><span class="certificate-row-meta">PLATZI - 2024</span></span><span class="certificate-row-toggle" aria-hidden="true">+</span></summary><a class="certificate-preview-frame" href="document/diploma-estrategias-ingles.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Estrategias para aprender Inglés"><img src="img/Estrategias de aprendizaje ingles.png" alt="Estrategias de Aprendizaje" width="640" height="450" loading="lazy" decoding="async"></a></details>
+                        <a class="certificate-row-pdf" href="document/diploma-estrategias-ingles.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Estrategias para aprender Inglés">PDF</a>
+                    </article>
+                    <article class="certificate-archive-row">
+                        <details class="certificate-detail"><summary><span class="certificate-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V9l-6-6Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><span class="certificate-row-copy"><span class="certificate-row-title">Introducción a la Programación con Python</span><span class="certificate-row-meta">Santander Open Academy - 2024</span></span><span class="certificate-row-toggle" aria-hidden="true">+</span></summary><a class="certificate-preview-frame" href="document/Python.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Introducción a la Programación con Python"><img src="img/python.png" alt="Python bases" width="640" height="450" loading="lazy" decoding="async"></a></details>
+                        <a class="certificate-row-pdf" href="document/Python.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Introducción a la Programación con Python">PDF</a>
+                    </article>
+                    <article class="certificate-archive-row">
+                        <details class="certificate-detail"><summary><span class="certificate-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V9l-6-6Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><span class="certificate-row-copy"><span class="certificate-row-title">Introducción a la Ciencia de Datos</span><span class="certificate-row-meta">Santander Open Academy - 2024</span></span><span class="certificate-row-toggle" aria-hidden="true">+</span></summary><a class="certificate-preview-frame" href="document/Ciencia de datos.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Introducción a la Ciencia de Datos"><img src="img/ciencia de datos.png" alt="Ciencia de datos" width="640" height="450" loading="lazy" decoding="async"></a></details>
+                        <a class="certificate-row-pdf" href="document/Ciencia de datos.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Introducción a la Ciencia de Datos">PDF</a>
+                    </article>
+                    <article class="certificate-archive-row">
+                        <details class="certificate-detail"><summary><span class="certificate-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V9l-6-6Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><span class="certificate-row-copy"><span class="certificate-row-title">Fundamentos de JavaScript</span><span class="certificate-row-meta">PLATZI - 2024</span></span><span class="certificate-row-toggle" aria-hidden="true">+</span></summary><a class="certificate-preview-frame" href="document/diploma-javascript.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Fundamentos de JavaScript"><img src="img/Java-script.png" alt="Ciencia de datos" width="640" height="450" loading="lazy" decoding="async"></a></details>
+                        <a class="certificate-row-pdf" href="document/diploma-javascript.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Fundamentos de JavaScript">PDF</a>
+                    </article>
+                    <article class="certificate-archive-row">
+                        <details class="certificate-detail"><summary><span class="certificate-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V9l-6-6Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><span class="certificate-row-copy"><span class="certificate-row-title">Git y GitHub</span><span class="certificate-row-meta">PLATZI - 2024</span></span><span class="certificate-row-toggle" aria-hidden="true">+</span></summary><a class="certificate-preview-frame" href="document/diploma-git-github.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Git y GitHub"><img src="img/git-github.png" alt="Ciencia de datos" width="640" height="450" loading="lazy" decoding="async"></a></details>
+                        <a class="certificate-row-pdf" href="document/diploma-git-github.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir PDF de Git y GitHub">PDF</a>
+                    </article>
                 </div>
-                <div class="space-infoperson element-two">
-                    <p><strong>Alexis Arenas</strong> es un estudiante de Ingeniería de Sistemas y asistente administrativo graduado con una personalidad amable y alegre. Su pasión por la tecnología se combina con su deseo de ayudar a los demás, lo que lo convierte en un profesional único y orientado al servicio.
-                        <br>
-                    Con una actitud positiva y enérgica, se destaca por su habilidad para resolver problemas y su capacidad para trabajar en equipo. Su compromiso con la mejora continua y el aprendizaje constante lo impulsa a mantenerse actualizado en las últimas tendencias y tecnologías.
-                        <br>
-                    Reconocido por su enfoque centrado en el cliente, se esfuerza por proporcionar soluciones efectivas и amigables en cualquier situación. Su habilidad para comunicarse de manera clara y efectiva lo hace un activo valioso en cualquier equipo.
-                        <br>
-                    Con una dedicación inquebrantable para alcanzar el éxito y una sonrisa siempre presente, está emocionado de continuar su carrera profesional y contribuir al crecimiento y desarrollo de cualquier proyecto o equipo en el que participe.</p>
-                </div>
-                <div class="space-infoperson element-three">
-                    <img src="icons/sistemas_two.jpg" alt="">
-                </div>
-            </div>
+            </details>
         </div>
     </section>
     <!-- PIE DE PÁGINA -->
-    <footer>
-        <div class="partFooter">
-            <img src="img/logo_alexis.png" alt="">
+    <section class="proof-section" id="testimonios" aria-labelledby="testimonials-title" hidden>
+        <div class="contenedor"><div class="title"><h2 id="testimonials-title">Testimonios</h2><p>Comentarios de colaboración, presentados en forma resumida.</p></div><div class="testimonials-grid" id="testimonials-grid"></div></div>
+    </section>
+    <footer class="site-footer" id="contacto" aria-labelledby="footer-title">
+        <div class="footer-invitation">
+            <div><p class="footer-eyebrow">De la idea al producto.</p><h2 id="footer-title">Hablemos de tu<br>próximo proyecto.</h2></div>
+            <div class="footer-invitation-actions"><a class="footer-button footer-button-primary" href="mailto:ingalexisarenas@gmail.com">Enviar correo</a><a class="footer-button" href="https://wa.me/573209021560" target="_blank" rel="noopener noreferrer">WhatsApp</a></div>
         </div>
-        <div class="partFooter">
-            <h4>Contacto</h4>
-            <div class="contact">
-                <i class="fa-solid fa-phone"></i>
-                <p>(+57) 320-902-1560</p>
-            </div>
-            <div class="contact">
-                <i class="fa-solid fa-envelope"></i>
-                <p>laarenass@ufpso.edu.co</p>
-            </div>
-            <div class="contact">
-                <i class="fa-solid fa-user"></i>
-                <p>ingalexisarenas@gmail.com</p>
-            </div>
-            <div class="contact">
-                <i class="fa-solid fa-street-view"></i>
-                <p>Cra 20 #2-51</p>
-            </div>
-            <div class="contact">
-                <i class="fa-solid fa-location-dot"></i>
-                <p>Ocaña / Colombia</p>
-            </div>
+        <div class="footer-details">
+            <div class="footer-identity"><a class="footer-brand" href="#inicio"><img src="img/new-logo.png" decoding="async" alt="Logo de Alexis Arenas" width="48" height="48"><span>Alexis Arenas</span></a><p>Ingeniería de sistemas.<br>Desarrollo de software.</p><p class="footer-location">Ocaña / Colombia<br><span>Cra 20 #2-51</span></p></div>
+            <div class="footer-contact"><h3>Contacto</h3><a href="mailto:ingalexisarenas@gmail.com">ingalexisarenas@gmail.com</a><a href="tel:+573209021560">(+57) 320-902-1560</a></div>
+            <div class="footer-projects"><h3>Enlaces</h3><a href="https://prisma-nu-amber.vercel.app/" target="_blank" rel="noopener noreferrer">PRISMA</a><a href="https://alexis8125.github.io/FlorentIA/" target="_blank" rel="noopener noreferrer">FlorentIA</a></div>
         </div>
-        <div class="partFooter">
-            <h4>Enlaces</h4>
-            <a href="https://alexis8125.github.io/SoftTech-Systems/" target="_blank">SoftTech Systems</a>
-            <a href="https://alexis8125.github.io/FlorentIA/" target="_blank">FlorentIA</a>
-        </div>
-        <div class="partFooter">
-            <h4>Redes Sociales</h4>
-            <div class="social-media">            
-                <a href="https://www.linkedin.com/in/alexis-arenas-4880462b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/Alexis8125" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <!-- <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a> -->
-                <a href="https://x.com/alexxistech?s=21" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.instagram.com/ale_xis08125?igsh=MW1qMmJ4Ym1raGt6OQ%3D%3D&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <!-- <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a> -->
-            </div>
-        </div>
+        <div class="footer-bottom"><div class="footer-social"><span class="footer-social-label">Redes sociales</span><div class="footer-social-links">
+                <a href="https://www.linkedin.com/in/alexis-arenas-4880462b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
+                <a href="https://github.com/Alexis8125" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a>
+
+                <a href="https://x.com/alexxistech?s=21" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fa-brands fa-twitter" aria-hidden="true"></i><span>X</span></a>
+                <a href="https://www.instagram.com/ale_xis08125?igsh=MW1qMmJ4Ym1raGt6OQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+
+            </div></div><a class="footer-top" href="#inicio">Volver al inicio</a></div>
     </footer>
     <!-- scripts de js -->
-    <script src="https://kit.fontawesome.com/cc651b5ac7.js" crossorigin="anonymous"></script>
-     <script>
-        // JavaScript para el carrusel - VERSIÓN CORREGIDA
-        let slideIndex = 1;
-        
-        function mostrarSlides(n) {
-            let i;
-            const slides = document.getElementsByClassName("carrusel-elemento");
-            const puntos = document.getElementsByClassName("punto");
-            
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            
-            // Eliminamos el uso de display y solo usamos transform para el desplazamiento
-            const desliza = document.querySelector('.carrusel-desliza');
-            desliza.style.transform = `translateX(-${(slideIndex-1) * 100}%)`;
-            
-            // Actualizamos los puntos
-            for (i = 0; i < puntos.length; i++) {
-                puntos[i].className = puntos[i].className.replace(" activo", "");
-            }
-            
-            puntos[slideIndex-1].className += " activo";
-        }
-        
-        function moverCarrusel(n) {
-            mostrarSlides(slideIndex += n);
-        }
-        
-        function slideActual(n) {
-            mostrarSlides(slideIndex = n);
-        }
-        
-        // Iniciar el carrusel
-        document.addEventListener('DOMContentLoaded', function() {
-            mostrarSlides(slideIndex);
-            
-            // Auto-desplazamiento cada 5 segundos
-            setInterval(function() {
-                moverCarrusel(1);
-            }, 5000);
-        });
-    </script>
-    <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/cc651b5ac7.js" crossorigin="anonymous" async></script>
+    <script src="js/main.js?v=portfolio-hint-13"></script>
+    <script src="js/proof.js?v=impact-results-17"></script>
+    <script src="js/hero-mural.js?v=proof-process-15"></script>
 </body>
 </html>
